@@ -1,0 +1,38 @@
+<project xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/200/XMLSchema-instance">
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.6</maven.compiler.source>
+      <maven.compiler.target>1.6</maven.compiler.target>
+   </properties>
+   <repositories>
+      <repository>
+         <id>Nesstar</id>
+         <name>Nesstar Maven Repository</name>
+         <url>http://nesstar-dev.nsd.uib.no/nexus/content/groups/public/</url>
+      </repository>
+   </repositories>
+   <modelVersion>4.0.0</modelVersion>
+   <packaging>jar</packaging>
+   <groupId>com.nesstar.demo</groupId>
+   <artifactId>nesstar_study_lister</artifactId>
+   <version>1.0-SNAPSHOT</version>
+   <dependencies>
+      <dependency>
+         <groupId>com.nesstar</groupId>
+         <artifactId>nesstar-api</artifactId>
+         <version>0.2</version>
+      </dependency>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.9</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.hamcrest</groupId>
+         <artifactId>hamcrest-all</artifactId>
+         <version>1.1</version>
+      </dependency>
+   </dependencies>
+</project>
