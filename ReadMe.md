@@ -9,7 +9,7 @@ Nesstar API. You can find more information about the Nesstar API at the
 The included junit tests use the publicly available Nesstar server [Nesstar
 Demo](http://nesstar-demo.nsd.uib.no) 
 
-Nesstar API documentation can be fethced from our [Nexus
+Nesstar API documentation can be fetched from our [Nexus
 server](https://nesstar-dev.nsd.uib.no/nexus) or browsed online at
 http://www.nesstar.org/api/nesstar-api-0.2-javadoc/
 
