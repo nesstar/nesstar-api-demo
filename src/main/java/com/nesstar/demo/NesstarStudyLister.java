@@ -1,19 +1,26 @@
 package com.nesstar.demo;
 
-import com.nesstar.api.*;
 import java.io.IOException;
+import java.net.URI;
+
+import com.nesstar.api.NesstarDB;
+import com.nesstar.api.NesstarDBFactory;
+import com.nesstar.api.NesstarList;
+import com.nesstar.api.NotAuthorizedException;
+import com.nesstar.api.Server;
+import com.nesstar.api.Study;
 
 public final class NesstarStudyLister {
-   private NesstarDB nesstarDB;
-   private Server server;
+   private final NesstarDB nesstarDB;
+   private final Server server;
 
-   public NesstarStudyLister(String serverURL, int serverPort) throws IOException {
+   public NesstarStudyLister(URI serverURI) throws IOException {
       nesstarDB = NesstarDBFactory.getInstance();
-      server = nesstarDB.getServer(serverURL, serverPort);
+      server = nesstarDB.getServer(serverURI);
    }
 
    public String getListText() throws NotAuthorizedException, IOException {
-      NesstarList <Study> allStudies = server.getBank(Study.class).getAll();
+      NesstarList<Study> allStudies = server.getBank(Study.class).getAll();
       StringBuilder studyLabelList = new StringBuilder();
       for (Study study : allStudies) {
          studyLabelList.append(study.getLabel());
@@ -24,11 +31,9 @@ public final class NesstarStudyLister {
 
    public static void main(String[] args) {
       NesstarStudyLister nesstarDemoServerStudyLister;
-      String serverURL = "nesstar-demo.nsd.uib.no";
-      int serverPort = 80;
 
       try {
-         nesstarDemoServerStudyLister = new NesstarStudyLister(serverURL, serverPort);
+         nesstarDemoServerStudyLister = new NesstarStudyLister(new URI("http://nesstar-demo.nsd.uib.no"));
          String studyListText = nesstarDemoServerStudyLister.getListText();
          System.out.println(studyListText);
       } catch (Exception ioe) {
