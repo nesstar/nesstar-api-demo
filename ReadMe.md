@@ -11,7 +11,7 @@ Demo](http://nesstar-demo.nsd.uib.no)
 
 Nesstar API documentation can be fetched from our [Nexus
 server](https://nesstar-dev.nsd.uib.no/nexus) or browsed online at
-http://www.nesstar.org/api/nesstar-api-0.2-javadoc/
+http://www.nesstar.org/api/nesstar-api-0.3-javadoc/
 
 Getting Started
 ---------------
