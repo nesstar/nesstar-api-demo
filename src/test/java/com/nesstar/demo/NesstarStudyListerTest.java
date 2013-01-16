@@ -17,6 +17,7 @@ public class NesstarStudyListerTest {
       try {
          nsl = new NesstarStudyLister(new URI("http://nesstar-demo.nsd.uib.no"));
          studyLabels = nsl.getListText();
+         System.out.println(studyLabels);
       } catch (Exception e) {
 
       }
@@ -24,7 +25,7 @@ public class NesstarStudyListerTest {
 
    @Test
    public void listcontainsBritishGeneralElectionStudy() {
-      assertThat("Contains British General Election Study", studyLabels, containsString("British General Election Study"));
+      assertThat("Contains British Crime Survey", studyLabels, containsString("British Crime Survey"));
    }
 
    @Test
@@ -34,6 +35,6 @@ public class NesstarStudyListerTest {
 
    @Test
    public void listcontainsLifeExpectancyAtBirth() {
-      assertThat("Contains Life expectancy at birth cube", studyLabels, containsString("Life expectancy at birth"));
+      assertThat("Contains Environment, 2000, ISPP", studyLabels, containsString("Environment, 2000, Norwegian part of ISSP"));
    }
 }
