@@ -17,7 +17,6 @@ public class NesstarStudyListerTest {
       try {
          nsl = new NesstarStudyLister(new URI("http://nesstar-demo.nsd.uib.no"));
          studyLabels = nsl.getListText();
-         System.out.println(studyLabels);
       } catch (Exception e) {
 
       }
